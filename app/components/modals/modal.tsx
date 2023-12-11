@@ -9,14 +9,14 @@ interface ModalProps {
   onSubmit: () => void;
   title: string;
   body: React.ReactElement;
-  footer: React.ReactElement;
+  footer?: React.ReactElement;
   actionLabel: string;
   disabled?: boolean;
   secondaryAction?: () => void;
   secondaryActionLabel?: string;
 }
 
-const modal: React.FC<ModalProps> = ({
+const Modal: React.FC<ModalProps> = ({
   actionLabel,
   body,
   isOpen,
@@ -105,6 +105,7 @@ const modal: React.FC<ModalProps> = ({
                   onClick={handleSubmit}
                 />
               </div>
+              {footer}
             </div>
           </div>
         </div>
@@ -113,4 +114,4 @@ const modal: React.FC<ModalProps> = ({
   );
 };
 
-export default modal;
+export default Modal;
