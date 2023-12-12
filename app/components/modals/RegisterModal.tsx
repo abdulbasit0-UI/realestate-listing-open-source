@@ -60,7 +60,7 @@ const RegisterModal = () => {
         required
       />
       <Input
-        id="password"
+        id="email"
         label="Email"
         type="email"
         disabled={loading}
